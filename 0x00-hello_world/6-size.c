@@ -1,3 +1,7 @@
+/**
+ *Prints th data tpe value
+ *
+ */
 #include<stdio.h>
 int main(void)
 {
