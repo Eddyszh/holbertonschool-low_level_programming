@@ -8,11 +8,11 @@
  */
 int print_last_digit(int i)
 {
-	if (i < 10)
+	if (i < 0)
 	{
 		i=((i % 10) * -1);
 	}
-	else
+	else if (i > 0)
 	{
 		i=i % 10;
 	}
