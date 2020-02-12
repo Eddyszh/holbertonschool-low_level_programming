@@ -8,16 +8,13 @@
 int main(void)
 {
 	int i;
-	int num3;
-	int num5;
-	int sum;
+	int j;
 
-	for (i = 0; i < 1024; i++)
+	for (i = 3; i < 1024; i++)
 	{
-		num3 = num3 + (i % 3);
-		num5 = num5 + (i % 5);
+		if(i % 3 == 0 || i % 5 == 0)
+			j = j + i;
 	}
-	sum = num3 + num5;
-	printf("%d\n", sum);
+	printf("%d\n", j);
 	return (0);
 }
