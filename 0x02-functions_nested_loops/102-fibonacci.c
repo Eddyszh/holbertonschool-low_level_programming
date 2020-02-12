@@ -8,17 +8,15 @@
 int main(void)
 {
 	int i;
+	long int zero = 0;
 	long int one = 1;
-	long int two = 2;
-	long int succ = 2;
-
-	printf("1, ");
+	long int succ = 0;
 
 	for (i = 1; i <= 50; i++)
 	{
-		succ = one + two;
-		one = two;
-		two = succ;
+		succ = zero + one;
+		zero = one;
+		one = succ;
 		printf("%li", succ);
 		if (i != 50)
 			printf(", ");
