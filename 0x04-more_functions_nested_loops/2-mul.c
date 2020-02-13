@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * mul(int a, int b) - main function
+ * mul - main function
  *
  * Return: multiplication result
  *

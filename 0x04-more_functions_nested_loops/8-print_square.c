@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_square - draws a square with lines
+ * print_square - draws a square with hashes
  *
  * @size: the length of the square
  */
@@ -19,4 +19,5 @@ void print_square(int size)
 		}
 		_putchar('\n');
 	}
+	_putchar('\n');
 }
