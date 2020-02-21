@@ -16,11 +16,7 @@ char *cap_string(char *s)
 	{
 		for (j = 0; l[j] != '\0'; j++)
 		{
-			if (s[0] == l[j] || s[0] == u[j])
-			{
-				s[0] = u[j];
-			}
-			else if (s[i] == l[j])
+			if (s[i] == l[j])
 			{
 				for (k = 0; c[k] != '\0'; k++)
 				{
