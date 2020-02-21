@@ -14,15 +14,15 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; c[j] != '\0'; j++)
+		for (j = 0; l[j] != '\0'; j++)
 		{
-			if (c[j] == s[i])
+			if (l[j] == s[i] || s[i] == u[j])
 			{
-				for (k = 0; l[k] != '\0'; k++)
+				for (k = 0; c[k] != '\0'; k++)
 				{
-					if (s[i + 1] == l[k])
+					if (s[i - 1] == c[k])
 					{
-						s[i + 1] = u[k];
+						s[i] = u[j];
 					}
 				}
 			}
