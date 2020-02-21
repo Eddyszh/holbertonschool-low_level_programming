@@ -16,7 +16,7 @@ char *cap_string(char *s)
 		{
 			if (i == 0)
 			{
-				s[i] = -32;
+				s[i] -= 32;
 			}
 			else
 			{
