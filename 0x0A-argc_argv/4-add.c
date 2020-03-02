@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int r, i, j;
+	int r = 0, i, j;
 
 	for (i = 1; i < argc; i++)
 	{
