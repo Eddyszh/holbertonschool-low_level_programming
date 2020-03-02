@@ -1,30 +1,27 @@
 #include <stdio.h>
-int atoi(char *str);
+#include <stdlib.h>
+#include <ctype.h>
 /**
  * main - adds positive numbers
- * @argc: number of arguments commands
+ * @argc: number of arguments command
  * @argv: length of argc
  * Return: 0 if there are numbers 1 otherwise
  */
 int main(int argc, char *argv[])
 {
-	int r, i;
+	int r, i, j;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			r += atoi(argv[i]);
-		}
-	}
-	if (argc == 0)
-	{
-		return (0);
+		r += atoi(argv[i]);
 	}
 	printf("%d\n", r);
 	return (0);
