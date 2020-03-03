@@ -3,23 +3,27 @@
 /**
  * _strdup - returns a pointer to a newly allocated space in memory
  * @str: pointer to char
- * Return: '\0' if str = '\0'. A pointer to the duplicated string
+ * Return: NULL if str = NULL. A pointer to the duplicated string
  */
 char *_strdup(char *str)
 {
-	int i;
+	int i, l = 0;
 	char *s;
 
-	if (str == '\0')
+	if (str == NULL)
 	{
-		return ('\0');
+		return (NULL);
 	}
 	else
 	{
-		s = malloc(*str + 1 * sizeof(char));
-		if (s == '\0')
+		while (l < *str)
 		{
-			return ('\0');
+			l++;
+		}
+		s = malloc(l + 1 * sizeof(char));
+		if (s == NULL)
+		{
+			return (NULL);
 		}
 		else
 		{
@@ -30,4 +34,5 @@ char *_strdup(char *str)
 		}
 		return (s);
 	}
+	return (s);
 }
