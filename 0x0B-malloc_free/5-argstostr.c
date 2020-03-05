@@ -15,10 +15,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < av[i][j]; j++)
+		for (j = 0; av[i][j]; j++)
 			k++;
 	}
-	s = malloc((ac + n + 1) * sizeof(char));
+	s = malloc((ac + k + 1) * sizeof(char));
 	if (s == 0)
 		return (NULL);
 	for (i = 0, k = 0; i < ac; i++)
