@@ -20,10 +20,10 @@ char *argstostr(int ac, char **av)
 	}
 	s = malloc((ac + k + 1) * sizeof(char));
 	if (s == 0)
-		return (0;
+		return (0);
 	for (i = 0, k = 0; i < ac; i++)
 	{
-		for (j = 0; a[i][j]; j++)
+		for (j = 0; av[i][j]; j++, k++)
 			s[k] = av[i][j];
 		s[k] = '\n';
 		k++;
