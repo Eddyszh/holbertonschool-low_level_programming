@@ -3,7 +3,7 @@
  * main - calculator
  * @ac: number of argument commands
  * @av: length of ac
- * Return: result of an operation
+ * Return: 0
  */
 int main(int ac, char *av[])
 {
