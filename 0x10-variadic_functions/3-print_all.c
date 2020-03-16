@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * print_strings - prints strings, followed by a new line
+ * print_all - prints anything
  * @format: formats that will receive to print
  * Return: 0
  */
@@ -15,9 +15,9 @@ void print_all(const char * const format, ...)
 	char *s;
 
 	va_start(list, format);
-	while (format[index])
+	while (format && format[index])
 	{
-		while (format && format[index])
+		while (format[index])
 		{
 			switch (format[index++])
 			{
@@ -39,13 +39,13 @@ void print_all(const char * const format, ...)
 					s = "(nil)";
 				printf("%s", s);
 				break;
-			default :
+			default:
 				continue;
 			}
 			if (format[index])
 				printf(", ");
 		}
 	}
-	printf("\n");
 	va_end(list);
+	printf("\n");
 }
