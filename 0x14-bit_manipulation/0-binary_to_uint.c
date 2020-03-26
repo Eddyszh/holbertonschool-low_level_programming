@@ -14,14 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-	}
-	b_val = atoi(b);
-	while (b_val > 0)
-	{
-		mod = b_val % 10;
-		d_val += mod * base;
-		b_val /= 10;
-		base *= 2;
+		d_val += (b - '0') << 2;
 	}
 	return (d_val);
 }
