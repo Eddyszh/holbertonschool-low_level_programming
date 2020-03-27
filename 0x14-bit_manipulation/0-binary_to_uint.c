@@ -6,7 +6,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, mod, b_val, d_val = 0, base = 1;
+	unsigned int i, d_val = 0;
 
 	if (!b)
 		return (0);
@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != 48 && b[i] != 49)
 			return (0);
-		d_val += (b - '0') << 2;
+		d_val = (d_val * 2) + (b[i] - '0');
 	}
 	return (d_val);
 }
